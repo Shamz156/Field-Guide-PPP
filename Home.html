@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A Field Guide to the Graphic Design Profession</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    /* Main Title */
+    h1 {
+      font-size: 120px;
+      margin-bottom: 300px;
+    }
+
+    /* Grid layout for section boxes */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px; /* space between boxes */
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Section Boxes */
+    .section-box {
+      padding: 40px;
+      border: 3px solid black;
+      background-color: white;
+      text-decoration: none;
+      color: black;
+      font-size: 50px;
+      text-align: center;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      cursor: pointer;
+      border-radius: 30px;
+    }
+
+    .section-box:hover {
+      background-color: #f6e1af;
+      transform: translateY(-5px);
+    }
+
+    @media (max-width: 700px) {
+      .section-box {
+        font-size: 32px;
+        padding: 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Main Title -->
+  <h1>A Field Guide to the Graphic Design Profession</h1>
+
+  <!-- Sections Grid -->
+  <div class="grid-container">
+    <a href="creativity.html" class="section-box">Creativity and Culture</a>
+    <a href="practice.html" class="section-box">Locating Your Practice</a>
+    <a href="directory.html" class="section-box">Design Directory</a>
+    <a href="takeaways.html" class="section-box">Professional Practice Take-Aways</a>
+    <a href="beyond.html" class="section-box">Beyond the Profession</a>
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- Floating "Rain" Images Section -->
+<div class="floating-images">
+  <img src="photos main page/1.jpg" alt="1" class="floating-img img1">
+  <img src="photos main page/2.jpg" alt="2" class="floating-img img2">
+  <img src="photos main page/3.jpg" alt="3" class="floating-img img3">
+  <img src="photos main page/4.jpg" alt="4" class="floating-img img4">
+  <img src="photos main page/5.jpg" alt="5" class="floating-img img5">
+</div>
+
+<style>
+/* Floating images container covers entire page */
+.floating-images {
+  position: absolute; /* absolutely positioned over page */
+  top: 400px; /* start just below the title, adjust as needed */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 120px); /* cover rest of page */
+  pointer-events: none; /* allows clicking sections underneath */
+  z-index: 10; /* on top of sections */
+}
+
+/* Images styling */
+.floating-img {
+  position: absolute;
+  width: 350px; /* adjust size */
+  height:auto;
+  animation: fall linear infinite;
+  animation-timing-function: ease-in-out; /* smooth motion */
+  opacity: 0.5;
+}
+
+/* Different horizontal positions and animation speeds */
+.img1 { left: 10%; animation-duration: 8s; animation-delay: 0s; }
+.img2 { left: 25%; animation-duration: 10s; animation-delay: 0s; }
+.img3 { left: 50%; animation-duration: 9s; animation-delay: 0s; }
+.img4 { left: 70%; animation-duration: 11s; animation-delay: 0s; }
+.img5 { left: 85%; animation-duration: 7s; animation-delay: 0s; }
+
+/* Falling animation */
+@keyframes fall {
+  0% { top: 0px; transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+  100% { top: 1000px; transform: rotate(-10deg); } /* adjust height as needed */
+}
+</style>
+
+
+
